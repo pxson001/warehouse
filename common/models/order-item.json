@@ -1,0 +1,26 @@
+{
+  "name": "OrderItem",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "quantity": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "hasOne",
+      "model": "Product",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
