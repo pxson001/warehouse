@@ -6,6 +6,9 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "number"
+    },
     "note": {
       "type": "string"
     },
@@ -15,14 +18,6 @@
   },
   "validations": [],
   "relations": {
-    "items": {
-      "type": "hasMany",
-      "model": "OrderItem",
-      "foreignKey": "",
-      "options": {
-        "nestRemoting": true
-      }
-    },
     "customer": {
       "type": "belongsTo",
       "model": "Customer",
@@ -30,6 +25,12 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": "productId",
+      "through": "OrderItem"
     }
   },
   "acls": [],

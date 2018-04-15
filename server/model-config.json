@@ -58,5 +58,9 @@
   "Image": {
     "dataSource": "mongo",
     "public": true
+  },
+  "Container": {
+    "dataSource": "mongo-storage",
+    "public": true
   }
 }

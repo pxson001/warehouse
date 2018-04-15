@@ -7,7 +7,7 @@
   },
   "properties": {
     "id": {
-      "type": "string"
+      "type": "number"
     },
     "street": {
       "type": "string"
